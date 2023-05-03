@@ -1,23 +1,17 @@
+import { courses } from '@/pages/api/api.type'
 import React from 'react'
 import { BiLinkExternal } from 'react-icons/bi'
 
-type Props = {}
+type Props = {
+  courses: courses[]
+}
 
-const Courses = (props: Props) => {
+const Courses = ({ courses }: Props) => {
 
-  const makeDate = (text: string) => {
+  const makeDate = (text: Date) => {
     const date = new Date(text)
     return `${date.getMonth() + 1}/${date.getFullYear()}`
   }
-
-  const arrCourses = [
-    {
-      name: "Create an Advanced Web App with React and Redux Skill Path",
-      date: "2023-03-26T12:00:00.000Z",
-      place: "Codecademy",
-      link: "https://www.google.com"
-    }
-  ]
 
   return (
     <div className='mx-9 my-5'>
@@ -26,7 +20,7 @@ const Courses = (props: Props) => {
       <div className='grid grid-cols-2 gap-2'>
 
         {
-          arrCourses.map((item, idx) => (
+          courses.map((item, idx) => (
             <div key={idx}>
               <div className='flex items-center'>
                 <p className='mr-2'>{item.name + " (" + makeDate(item.date) + ")"}</p>

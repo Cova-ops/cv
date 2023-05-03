@@ -1,22 +1,24 @@
+import { me } from '@/pages/api/api.type'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  me: me
+}
 
-const Me = (props: Props) => {
+const Me = ({ me }: Props) => {
   return (
     <div className='flex p-5'>
       <img
         alt=''
-        src='http://localhost:3000/public/portfolio/image_yo.jpg'
+        src={me.imageLink}
         className='flex-initial relative h-40 w-40 rounded-md object-cover mx-3'
       />
 
       <div className='flex-1 mx-3'>
-        <h1 className='font-bold uppercase text-xl'>Daniel Covarrubias Sanchez</h1>
-        <h3 className='text-gray-500 text-base'>Middle Software Enginner</h3>
+        <h1 className='font-bold uppercase text-xl'>{me.name}</h1>
+        <h3 className='text-gray-500 text-base'>{me.role}</h3>
         <p className='text-sm'>
-          Innovative Programmer and Critical thinker striving to make the world a more unified and connected place. A creative thinker, adept in
-          software development and working with various data structures.
+          {me.summary}
         </p>
       </div>
     </div>

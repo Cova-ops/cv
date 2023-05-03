@@ -1,15 +1,11 @@
+import { skills } from '@/pages/api/api.type'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  skills: skills[]
+}
 
-const Skills = (props: Props) => {
-
-  const arrSkills = [
-    "Node JS", "Firebase", "Amazon Web Services (AWS)", "CSS", "JavaScript",
-    "Mongo DB", "MySQL", "NextJS", "Oracle DB", "Docker", "Redux", "Tailwind",
-    "Git", "Typescript", "Jest", "Linux", "Unix", "Python", "Bash", "API REST",
-    "API SOAP", "API GraphQL"
-  ]
+const Skills = ({ skills }: Props) => {
 
   return (
     <div className='mx-9 my-5'>
@@ -17,7 +13,7 @@ const Skills = (props: Props) => {
 
       <div className='flex flex-wrap'>
         {
-          arrSkills.map((item, idx) => (
+          skills.map((item, idx) => (
             <div className='border border-gray-500 m-1 py-1 px-2 rounded-md' key={idx}>
               {item}
             </div>

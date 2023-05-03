@@ -1,31 +1,19 @@
+import { languages } from '@/pages/api/api.type'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  languages: languages[]
+}
 
-const Languages = (props: Props) => {
-
-  const arrLanguages = [
-    {
-      name: "Spanish",
-      progress: 100
-    },
-    {
-      name: "English",
-      progress: 70
-    },
-    {
-      name: "German",
-      progress: 20
-    }
-  ]
+const Languages = ({ languages }: Props) => {
 
   return (
     <div className='mx-9 my-5'>
       <h2 className='uppercase text-green-blue font-bold text-xl'>Languages</h2>
 
       {
-        arrLanguages.map((item, idx) => (
-          <div className='my-2'>
+        languages.map((item, idx) => (
+          <div className='my-2' key={idx}>
             <div className="flex justify-between mb-1">
               <span className="text-base font-medium text-black">{item.name}</span>
               <span className="text-sm font-medium text-black">{item.progress}%</span>
