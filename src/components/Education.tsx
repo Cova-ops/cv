@@ -1,31 +1,24 @@
+import { education } from '@/pages/api/api.type'
 import React from 'react'
 import { BiLinkExternal } from 'react-icons/bi'
 
-type Props = {}
+type Props = {
+  education: education[]
+}
 
-const Education = (props: Props) => {
+const Education = ({ education }: Props) => {
 
-  const makeDate = (text: string) => {
+  const makeDate = (text: Date) => {
     const date = new Date(text)
     return `${date.getMonth() + 1}/${date.getFullYear()}`
   }
-
-  const arrEducation = [
-    {
-      title: "Computer Systems Engineer",
-      school: "Escuela Superior de Compuro - IPN",
-      link: "https://www.escom.ipn.mx",
-      "dateStarted": "2017-08-01T12:00:00.000Z",
-      "dateEnded": "2022-06-01T12:00:00.000Z",
-    }
-  ]
 
   return (
     <div className='mx-9 my-5'>
       <h2 className='uppercase text-green-blue font-bold text-xl'>Education</h2>
 
       {
-        arrEducation.map((item, idx) => (
+        education.map((item, idx) => (
           <div key={idx}>
             <p className='font-bold text-xl'>{item.title}</p>
 
