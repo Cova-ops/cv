@@ -15,9 +15,8 @@ const Me = (props: Props) => {
         <h1 className='font-bold uppercase text-xl'>Daniel Covarrubias Sanchez</h1>
         <h3 className='text-gray-500 text-base'>Middle Software Enginner</h3>
         <p className='text-sm'>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+          Innovative Programmer and Critical thinker striving to make the world a more unified and connected place. A creative thinker, adept in
+          software development and working with various data structures.
         </p>
       </div>
     </div>

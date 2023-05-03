@@ -12,9 +12,9 @@ const Projects = (props: Props) => {
 
   const arrProjects = [
     {
-      name: "title 1",
-      date: "2021-12-02T12:00:00.000Z",
-      summary: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      name: "My CV",
+      date: "2023-04-01T12:00:00.000Z",
+      summary: "This document was designed and created as a web page. The internal architecture is designed to be scalable and maintainable, with automated deployments on servers. Using NextJS, React, Tailwind, AWS, Git, Nginx, REST API.",
       link: "https://www.google.com"
     }
   ]
